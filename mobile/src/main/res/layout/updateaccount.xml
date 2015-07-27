@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+    android:background="@drawable/greybg"
+    android:weightSum="1"
+    android:id="@+id/lin">
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:background="#e7050505"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:id="@+id/imageView4"
+                android:src="@drawable/logo3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Update Account"
+                android:id="@+id/textView10"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="105dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="7dp" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Username"
+            android:id="@+id/textView5"
+            android:layout_marginLeft="30dp"
+            android:textColor="#fff" />
+
+        <EditText
+            android:id="@+id/editTextUserName"
+            android:hint="User Name..."
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/mybutton"
+            android:textColor="#ffffffff"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:textColorHint="#ffffffff"
+            android:paddingLeft="5dp">
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Password"
+            android:id="@+id/textView8"
+            android:layout_marginLeft="30dp"
+            android:textColor="#fff" />
+
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:hint="Password..."
+            android:background="@drawable/mybutton"
+            android:inputType="textPassword"
+            android:textColor="#ffffffff"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:password="false"
+            android:textColorHint="#ffffffff"
+            android:paddingLeft="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Confirm Password"
+            android:id="@+id/textView9"
+            android:layout_marginLeft="30dp"
+            android:textColor="#fff" />
+
+        <EditText
+            android:id="@+id/editTextConfirmPassword"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/mybutton"
+            android:hint="Confirm Password..."
+            android:inputType="textPassword"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:textColorHint="#ffffff"
+            android:paddingLeft="5dp"
+            android:textColor="#ffffffff" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <Button
+            android:id="@+id/updateBtn"
+            android:layout_width="129dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/backbuttonlayout2"
+            android:text="Update"
+            android:onClick="signIn"
+            android:layout_marginLeft="160dp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="-58dp">
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="Back"
+            android:id="@+id/backButton"
+            android:onClick="clickBackButton"
+            android:textColor="#ffffffff"
+            android:layout_gravity="bottom"
+            android:background="@drawable/backbuttonlayout"
+            android:layout_marginTop="5dp" />
+    </LinearLayout>
+
+</LinearLayout>

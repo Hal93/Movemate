@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#ff23bf03">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:windowSoftInputMode="adjustPan"
+        android:minHeight="50px">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="140dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="305dp"
+            android:background="#ffffffff"
+            android:id="@+id/whiteSecton">
+
+            <Button
+                android:layout_width="132dp"
+                android:layout_height="wrap_content"
+                android:text="Reward"
+                android:id="@+id/rewardButton"
+                android:layout_gravity="center_horizontal" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sendBtn"
+                android:id="@+id/sendBtn"
+                android:layout_gravity="center_horizontal"
+                android:onClick="clickSend"
+                android:nestedScrollingEnabled="false"
+                android:clickable="true" />
+        </LinearLayout>
+
+        <ListView
+            android:layout_width="fill_parent"
+            android:layout_height="250dp"
+            android:id="@+id/ActivityList"
+            android:background="#ff88bf3c"
+            android:choiceMode="singleChoice"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/toolbar" />
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="370dp"
+            android:id="@+id/aerobicList"
+            android:background="#ff8edc27"
+            android:visibility="invisible"
+            android:choiceMode="singleChoice"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/toolbar">
+        </ListView>
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="222dp"
+            android:id="@+id/balanceList"
+            android:background="#ff8edc27"
+            android:visibility="invisible"
+            android:choiceMode="singleChoice"
+            android:layout_alignParentStart="true"
+            android:layout_alignBottom="@+id/whiteSecton"
+            android:layout_below="@+id/toolbar" />
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="222dp"
+            android:id="@+id/strengthList"
+            android:background="#ff8edc27"
+            android:visibility="invisible"
+            android:choiceMode="singleChoice"
+            android:layout_alignParentStart="true"
+            android:layout_alignBottom="@+id/whiteSecton"
+            android:layout_below="@+id/toolbar" />
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="235dp"
+            android:id="@+id/flexibleList"
+            android:background="#ff8edc27"
+            android:visibility="invisible"
+            android:choiceMode="singleChoice"
+            android:layout_alignParentStart="true"
+            android:layout_alignBottom="@+id/whiteSecton"
+            android:layout_below="@+id/toolbar" />
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:minHeight="?attr/actionBarSize"
+            android:background="#ff2a2a2a"
+            android:layout_width="match_parent"
+            android:theme="@style/AppTheme"
+            android:layout_height="wrap_content">
+        </android.support.v7.widget.Toolbar>
+
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:background="#ff2a2a2a"
+            android:id="@+id/radioGroup2">
+            <RadioButton
+                android:id="@+id/monitorTab"
+                style="@style/navbar_button"
+                android:drawableTop="@drawable/navbar_allselector"
+                android:text="Monitor"
+                android:layout_height="fill_parent"
+                android:paddingTop="8dp"
+                android:textColor="#ffffffff" />
+            <RadioButton
+                android:id="@+id/tabActive"
+                style="@style/navbar_button"
+                android:drawableTop="@drawable/navbar_activeselector"
+                android:text="Activity"
+                android:layout_marginLeft="5dp"
+                android:layout_height="fill_parent"
+                android:paddingTop="8dp"
+                android:textColor="#ffffffff" />
+            <RadioButton
+                android:id="@+id/tabSettings"
+                style="@style/navbar_button"
+                android:drawableTop="@drawable/navbar_setselector"
+                android:text="Settings"
+                android:layout_marginLeft="5dp"
+                android:layout_height="fill_parent"
+                android:paddingTop="9dp"
+                android:textColor="#ffffffff" />
+
+        </RadioGroup>
+    </RelativeLayout>
+</LinearLayout>

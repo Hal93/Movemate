@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#ff23bf03">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffcac8c5"
+        android:onClick="clickLogout"
+        android:id="@+id/logoutBtn">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:minHeight="?attr/actionBarSize"
+            android:background="#ff2a2a2a"
+            android:layout_width="match_parent"
+            android:theme="@style/AppTheme"
+            android:layout_height="wrap_content">
+        </android.support.v7.widget.Toolbar>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="51dp">
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="70dp"
+                android:text="Manage Account"
+                android:id="@+id/button8"
+                android:layout_above="@+id/removeAcc"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="false"
+                android:nestedScrollingEnabled="false"
+                android:onClick="clickUpdate"
+                android:layout_marginBottom="-10dp"
+                android:textStyle="bold"
+                android:layout_marginTop="-8dp" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="70dp"
+                android:text="Delete Account"
+                android:id="@+id/removeAcc"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="-10dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="70dp"
+                android:text="Logout"
+                android:id="@+id/logout"
+                android:layout_below="@+id/removeAcc"
+                android:layout_alignLeft="@+id/removeAcc"
+                android:layout_alignStart="@+id/logout"
+                android:layout_alignRight="@+id/removeAcc"
+                android:layout_alignEnd="@+id/logout"
+                android:onClick="clickLogout"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:background="#ff2a2a2a"
+            android:id="@+id/radioGroup">
+            <RadioButton
+                android:id="@+id/btnAll"
+                style="@style/navbar_button"
+                android:drawableTop="@drawable/navbar_allselector"
+                android:text="Monitor"
+                android:layout_height="fill_parent"
+                android:paddingTop="8dp"
+                android:textColor="#ffffffff" />
+            <RadioButton
+                android:id="@+id/btnPicture"
+                style="@style/navbar_button"
+                android:drawableTop="@drawable/navbar_activeselector"
+                android:text="Activity"
+                android:layout_marginLeft="5dp"
+                android:layout_height="fill_parent"
+                android:paddingTop="8dp"
+                android:textColor="#ffffffff" />
+            <RadioButton
+                android:id="@+id/btnVideo"
+                style="@style/navbar_button"
+                android:drawableTop="@drawable/navbar_setselector"
+                android:text="Settings"
+                android:layout_marginLeft="5dp"
+                android:layout_height="fill_parent"
+                android:paddingTop="9dp"
+                android:textColor="#ffffffff" />
+
+        </RadioGroup>
+
+
+    </RelativeLayout>
+</LinearLayout>

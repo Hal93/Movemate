@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#ff23bf03">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fffffbf6"
+        android:onClick="clickLogout"
+        android:id="@+id/logoutBtn">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:minHeight="?attr/actionBarSize"
+            android:background="#ff2a2a2a"
+            android:layout_width="match_parent"
+            android:theme="@style/AppTheme"
+            android:layout_height="wrap_content">
+        </android.support.v7.widget.Toolbar>
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scrollbars="vertical" android:id="@+id/ScrollView"
+            android:layout_below="@+id/toolbar"
+            android:layout_above="@+id/radioGroup">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:orientation="vertical"
+                android:id="@+id/linearLayout1"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_below="@+id/toolbar"
+                android:layout_alignParentStart="true"
+                android:paddingTop="10dp">
+
+                <TextView android:text="Movemate Help"
+                    android:id="@+id/textView1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    android:gravity="center_horizontal"
+                    android:layout_below="@+id/toolbar"
+                    android:layout_alignParentStart="true"
+                    android:textColor="#ffbaff0e"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="290dp">
+                </TextView>
+
+                <TextView android:text="The Aim"
+                    android:id="@+id/textView2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:paddingLeft="20dp">
+                </TextView>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="135dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Welcome to Movemate. Movemate&apos;s aim is to get children active and healthy in new, fun ways. Movemate is designed to help both parents and children realise that child obesity is important and it can be beaten. Movemate strives to reduce childhood obesity by one step at a time. "
+                    android:id="@+id/textView12"
+                    android:textSize="15dp"
+                    android:paddingLeft="20dp" />
+
+                <TextView android:text="Getting Started"
+                    android:id="@+id/textView3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:paddingLeft="20dp"
+                    android:layout_marginTop="10dp">
+                </TextView>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="255dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Once Movemate is connected with Android Wear Watch, you can choose  activities in aerobic, balance and strength lists in the activity screen. Hit send and those activities are sent to your child&apos;s watch. It&apos;s that simple! Once sent, navigate to the monitor tab and monitor your child&apos;s progress. Measure heartrate and step activity, add child goals, view goals. You can also add custom activites when in list, scroll down and click add icon. Custom activities which will be stored in the system from then onwards"
+                    android:id="@+id/textView13"
+                    android:textSize="15dp"
+                    android:paddingLeft="20dp" />
+
+                <TextView android:text="Questions?"
+                    android:id="@+id/textView4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:paddingLeft="20dp"
+                    android:layout_marginTop="10dp">
+                </TextView>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="115dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="If you have any further queries, Movemate will love to hear from you. We are always looking for ways to improve our service and any feedback will be hugely appreciated. Contact Movemate&apos;s founder and creator, Dean O&apos; Halloran @dean.ohalloran@mycit.ie or 0123 132 12132 "
+                    android:id="@+id/textView14"
+                    android:textSize="15dp"
+                    android:paddingLeft="20dp" />
+
+
+            </LinearLayout>
+        </ScrollView>
+
+
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:background="#ff2a2a2a"
+            android:id="@+id/radioGroup">
+            <RadioButton
+                android:id="@+id/btnAll"
+                style="@style/navbar_button"
+                android:drawableTop="@drawable/navbar_allselector"
+                android:text="Monitor"
+                android:layout_height="fill_parent"
+                android:paddingTop="8dp"
+                android:textColor="#ffffffff" />
+            <RadioButton
+                android:id="@+id/btnPicture"
+                style="@style/navbar_button"
+                android:drawableTop="@drawable/navbar_activeselector"
+                android:text="Activity"
+                android:layout_marginLeft="5dp"
+                android:layout_height="fill_parent"
+                android:paddingTop="8dp"
+                android:textColor="#ffffffff" />
+            <RadioButton
+                android:id="@+id/btnVideo"
+                style="@style/navbar_button"
+                android:drawableTop="@drawable/navbar_setselector"
+                android:text="Settings"
+                android:layout_marginLeft="5dp"
+                android:layout_height="fill_parent"
+                android:paddingTop="9dp"
+                android:textColor="#ffffffff" />
+
+        </RadioGroup>
+
+
+    </RelativeLayout>
+</LinearLayout>

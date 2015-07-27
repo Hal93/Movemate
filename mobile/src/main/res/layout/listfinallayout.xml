@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp" android:layout_height="150dp"
+    android:id="@+id/itemLayout"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="10dp"
+    android:background="@drawable/customborder">
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/delete_btn"
+        android:background="@null"
+        android:src="@drawable/bin2"
+
+        android:layout_alignParentTop="false"
+        android:layout_marginRight="10dp"
+        android:scaleType="fitCenter"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="item"
+        android:id="@+id/goalItem"
+        android:textSize="15dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:clickable="true"
+        android:onClick="itemClicked"
+        android:layout_alignBottom="@+id/delete_btn"
+        android:textStyle="bold|italic"></TextView>
+
+</RelativeLayout>

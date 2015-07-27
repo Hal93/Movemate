@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:yourapp="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/action_aerobic"
+        android:title="Aerobic"
+        yourapp:showAsAction="always" />
+    <item android:id="@+id/action_balance"
+        android:title="Balance"
+        yourapp:showAsAction="always" />
+    <item android:id="@+id/action_strength"
+        android:title="Strength"
+        yourapp:showAsAction="always" />
+    <item android:id="@+id/action_help"
+        android:title="Help" />
+    <item android:id="@+id/action_settings"
+        android:title="Settings" />
+</menu>

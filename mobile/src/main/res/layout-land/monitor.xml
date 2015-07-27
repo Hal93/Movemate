@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#ff23bf03">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:minHeight="50px"
+        android:background="@drawable/orangebg">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="270dp"
+            android:layout_height="130dp"
+            android:background="#ffffffff"
+            android:paddingTop="5dp"
+            android:layout_above="@+id/radioGroup"
+            android:layout_alignTop="@+id/linearLayout"
+            android:layout_alignParentStart="true">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/layout">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/heartIcon"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/goodheart"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Bpm"
+                    android:id="@+id/textView"
+                    android:layout_gravity="right"
+                    android:textSize="20dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="-15dp" />
+
+                <ImageView
+                    android:layout_width="47dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageView7"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/footsteps"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:paddingBottom="30dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Steps"
+                    android:id="@+id/textView3"
+                    android:layout_gravity="right"
+                    android:textSize="20dp"
+                    android:layout_marginTop="-40dp"
+                    android:layout_marginRight="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="0"
+                    android:id="@+id/HeartCount"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="50dp"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginTop="-150dp"
+                    android:textColor="#ff000000" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="0"
+                android:id="@+id/stepValue"
+                android:layout_gravity="center_horizontal"
+                android:textSize="50dp"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="-90dp"
+                android:textColor="#ff000000" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="85dp">
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Goals"
+                android:id="@+id/button5"
+                android:layout_marginBottom="5dp"
+                android:onClick="clickViewGoals"
+                android:textColor="#ff000000"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="+ Goal"
+                android:id="@+id/button6"
+                android:onClick="clickAddGoalButton"
+                android:textColor="#ff000000"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_below="@+id/toolbar"
+            android:layout_alignParentEnd="true"
+            android:layout_above="@+id/radioGroup"
+            android:id="@+id/linearLayout"
+            android:layout_marginRight="10dp">
+
+            <lecho.lib.hellocharts.view.PieChartView
+                android:id="@+id/chart"
+                android:layout_width="193dp"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:layout_below="@+id/toolbar"
+                android:layout_alignParentEnd="true"
+                android:layout_above="@+id/radioGroup" />
+        </LinearLayout>
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:minHeight="?attr/actionBarSize"
+            android:background="#ff2a2a2a"
+            android:layout_width="match_parent"
+            android:theme="@style/AppTheme"
+            android:layout_height="wrap_content">
+        </android.support.v7.widget.Toolbar>
+
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:background="#ff2a2a2a"
+            android:id="@+id/radioGroup">
+            <RadioButton
+                android:id="@+id/btnAll"
+                style="@style/navbar_button"
+                android:drawableTop="@drawable/navbar_allselector"
+                android:text="Monitor"
+                android:layout_height="fill_parent"
+                android:paddingTop="8dp"
+                android:textColor="#ffffffff" />
+            <RadioButton
+                android:id="@+id/btnPicture"
+                style="@style/navbar_button"
+                android:drawableTop="@drawable/navbar_activeselector"
+                android:text="Activity"
+                android:layout_marginLeft="5dp"
+                android:layout_height="fill_parent"
+                android:paddingTop="8dp"
+                android:textColor="#ffffffff" />
+            <RadioButton
+                android:id="@+id/btnVideo"
+                style="@style/navbar_button"
+                android:drawableTop="@drawable/navbar_setselector"
+                android:text="Settings"
+                android:layout_marginLeft="5dp"
+                android:layout_height="fill_parent"
+                android:paddingTop="9dp"
+                android:textColor="#ffffffff" />
+
+        </RadioGroup>
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.finalproject.dean.finalprojectapplication" >
+    <meta-data android:name="com.google.android.gms.version"
+        android:value="@integer/google_play_services_version"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:name="com.finalproject.dean.finalprojectapplication.MyApplication"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".activityScreen"
+            android:exported="true"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SignUpActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".Help"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".addActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".monitor"
+            android:label="Monitor" >
+        </activity>
+        <activity
+            android:name=".settings"
+            android:label="Settings" >
+        </activity>
+        <activity
+            android:name=".main"
+            android:label="Activity" >
+        </activity>
+        <activity
+            android:name=".addGoal"
+            android:label="">
+        </activity>
+        <activity
+            android:name=".listGoal"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".updateAccount"
+            android:label="@string/app_name" >
+        </activity>
+        <service android:name=".DataLayerListenerService">
+            <intent-filter>
+                <action android:name="com.google.android.gms.wearable.BIND_LISTENER" />
+            </intent-filter>
+        </service>
+
+    </application>
+
+</manifest>
